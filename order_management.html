@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница заказа</title>
+    <link rel="stylesheet" href="css/order_management.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top"><!--header-top это верхушка нашей шапки-->
+                <div class="logo">
+                    <a href="#"><!--# это ссылка на ту же страницу-->
+                        <!-- <img src="image/logo.png" alt=""> -->
+                        <span class="logotip"></span>
+                    </a>
+                </div>
+                <div class="header-btn" id="menu_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="header-content" id="header-content">
+                <h1 class="header-content__title">
+                    Concert
+                </h1>
+                <div class="header-content__text">
+                    Покупайте билеты на концерты любимых артистов. Выбирайте удобную дату, и получите удовольствие от музыки. 
+                </div>
+                <a class="button" href="#stocks__block">
+                    Акции
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="container container-menu">
+            <div class="close-btn" id="close_menu_btn"></div>
+            <div class="menu__list">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="checkregister.html">Личный кабинет</a></li>
+                    <li><a href="#stocks__block">Акции</a></li>
+                    <li><a href="#search__block">Поиск</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section class="fon-top">
+    <div class="fon">
+        <div class="fon__item" style="background-image: url(image/header-bg.jpg);"></div>
+    </div>
+</section>
+
+<section class="order__page">
+    <div class="container">
+        <div class="order__title">Ваш заказ</div>
+        <div class="order__info">
+            <img src="image/order.png" alt="">
+            <div class="tickets__info">
+                <div class="tickets__info-points">Код заказа: 83672513</div>
+                <div class="tickets__info-points">Стоимость: 3000</div>
+                <div class="tickets__info-points">Номер билета: 13256783</div>
+                <div class="tickets__info-points">Название: JONY</div>
+                <div class="tickets__info-points">Место: Москва</div>
+                <div class="tickets__info-points">Возраст: 0+</div>
+                <div class="tickets__info-points">Дата: 11 декабря</div>
+                <div class="tickets__info-points">Время: 22:00-00:00</div>
+                <div class="tickets__info-points">Рейтинг: 5</div>
+                <div class="tickets__info-points">Непроданных билетов: 57</div>
+                <div class="tickets__info-points">Длительность: 2 часа</div>
+                <div class="tickets__info-points2">Баллов для получения: 0</div>
+            </div>
+        </div>
+        <div class="customer__data">
+            <form action="#" method="get">
+                <div class="customer__data-title">Личная информация</div>
+                <input type="text" name="customer__data-name" tabindex="1" placeholder="Имя">
+                <input type="text" name="customer__data-surname" tabindex="2" placeholder="Фамилия">
+                <input type="tel" name="customer__data-birth" tabindex="3" placeholder="Дата рождения">
+                <input type="tel"  name="customer__data-num" tabindex="4" placeholder="Номер документа">
+                <input type="number" name="customer__data-bonus" tabindex="6" placeholder="Количество баллов">
+            </form>
+        </div>
+        <div class="place__hall">
+            <img src="image/place__hall.png" alt="">
+            <form action="#">
+                <input type="number" placeholder="Ряд" min="1" max="78">
+                <input type="number" placeholder="Место" min="1" max="100">
+            </form>
+        </div>
+        <a class="customer__data-btn" href="#">
+            Оформить заказ
+        </a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="conatainer">
+        <div class="footer-btn">
+            <a class="button" href="checkregister.html">
+                Личный кабинет
+            </a>
+        </div>
+        <div class="footer-copy">
+            <ul>
+                <li>WhiteTickets</li>
+                <li><a href="#search__block">Поиск</a></li>
+                <li><a href="#">8(800)289-20-10</a></li>
+                <li><a href="#stocks__block">Акции</a></li>
+                <li><a href="#">Заказы</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

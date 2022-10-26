@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в личный кабинет</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top"><!--header-top это верхушка нашей шапки-->
+                <div class="logo">
+                    <a href="#"><!--# это ссылка на ту же страницу-->
+                        <!-- <img src="image/logo.png" alt=""> -->
+                        <span class="logotip"></span>
+                    </a>
+                </div>
+                <div class="header-btn" id="menu_btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="header-content" id="header-content">
+                <h1 class="header-content__title">
+                    Concert
+                </h1>
+                <div class="header-content__text">
+                    Покупайте билеты на концерты любимых артистов. Выбирайте удобную дату, и получите удовольствие от музыки. 
+                </div>
+                <a class="button" href="index.html">
+                    Акции
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="container container-menu">
+            <div class="close-btn" id="close_menu_btn"></div>
+            <div class="menu__list">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="checkregister.html">Личный кабинет</a></li>
+                    <li><a href="index.html">Акции</a></li>
+                    <li><a href="index.html">Поиск</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section class="fon-top">
+    <div class="fon">
+        <div class="fon__item" style="background-image: url(image/header-bg.jpg);"></div>
+    </div>
+</section>
+
+
+<section class="subscription">
+    <div class="container">
+        <div class="subscription__title">Вход</div>
+        <div class="subscription__block">
+            <form action="#" method="get">
+                <div class="subscription__form">
+                    <div>
+                        <input tabindex="1" name="subscription-name" type="text" placeholder="Имя">
+                    </div>
+                    <div>
+                        <input tabindex="2" name="subscription-surname" type="text" placeholder="Фамилию">
+                    </div>
+                    <div>
+                        <input tabindex="3" name="subscription-num" type="tel" placeholder="Номер документа">
+                    </div>
+                    <di>
+                        <input tabindex="4" name="subscription-phone" type="tel" placeholder="Телефон">
+                    </di>
+                    <div>
+                        <input tabindex="5" name="subscription-password" type="password" placeholder="Пароль">
+                    </div>
+                    <div>
+                        <input tabindex="6" name="subscription-password-2" type="password" placeholder="Повторите пароль">
+                    </div>
+                </div>
+            </form>
+            <button class="subscription__btn">
+                <a href="profile.html">Войти</a>
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="conatainer">
+        <div class="footer-btn">
+            <a class="button" href="checkregister.html">
+                Личный кабинет
+            </a>
+        </div>
+        <div class="footer-copy">
+            <ul>
+                <li>WhiteTickets</li>
+                <li><a href="index.html">Поиск</a></li>
+                <li><a href="#">8(800)289-20-10</a></li>
+                <li><a href="index.html">Акции</a></li>
+                <li><a href="#">Заказы</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
