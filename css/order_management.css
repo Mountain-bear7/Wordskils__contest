@@ -288,12 +288,12 @@
     background: rgba(255, 255, 255, 0.15);
     transition: all .5s;
     margin-top: 30px;
-    /* margin: 30px auto 50px; */
-    /* max-width: 100px; */
     font-size: 20px;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    color: #fff;
+    cursor: pointer;
     }
     
     .customer__data-btn:hover{ background-color: #770302; }

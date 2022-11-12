@@ -236,13 +236,15 @@ body{
 .customer__data{ margin-bottom: 50px; }
 
 .customer__data-btn{ 
-display: inline-block;
-border: 1px solid #fff;
-padding: 30px 62px;
-background: rgba(255, 255, 255, 0.15);
-transition: all .5s;
-margin-top: 30px;
-font-size: 20px;
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 30px 62px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all .5s;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .customer__data-btn:hover{ background-color: #770302; }
