@@ -30,3 +30,11 @@ slides.forEach((elem) => {
     elem.classList.add('active')
   }
 })
+
+function viewDiv1(){
+    document.getElementById("customer-form2").style.display = "block";
+  };
+
+  function viewDiv2(){
+    document.getElementById("customer-form2").style.display = "none";
+  };

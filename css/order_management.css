@@ -210,7 +210,7 @@
   .tickets__info{ font-size: 20px; }
     
   .tickets__info > div{ margin-bottom: 20px; }
-  
+
   .customer__data-title{
     text-align: center;
     margin-top: 100px;
@@ -218,6 +218,31 @@
     font-size: 35px;
     font-weight: 700;
     color: rgb(220, 0, 0);
+  }
+
+  .customer__data-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* max-width: 1230px; */
+    width: 100%;
+    margin: 0 10px 0 10px;
+  }
+
+  .button__block{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .button__order{
+    padding: 20px;
+    cursor: pointer;
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: auto;
   }
   
   .customer__data input{
@@ -233,24 +258,28 @@
     outline: none;
   }
   
-  .customer__data{ margin-bottom: 50px; }
+  .customer__data{ 
+    border: 1px solid #fff;
+    margin-bottom: 75px;
+    padding-bottom: 50px; 
+    border-radius: 25px;
+    width: 300px;
+    margin: 10px auto;
+  }
   
   .place__hall img{
-    width: 450px;
-    height: 550px;
+    /* margin-top: 50px; */
+    margin: 50px auto;
+    width: 300px;
+    height: 400px;
 }
 
-.place__hall input{
-    margin: 15px auto 15px;
-    padding: 20px;
-    width: 100%;
-    background: transparent;
-    /* border: 0; */
-    /* border-bottom: 1px solid #fff; */
-    padding-bottom: 10px;
-    font-size: 20px;
-    color: #fff;
+.customer-btn{
+  display: flex;
+  justify-content: center;
 }
+
+#customer-form2{ display: none; }
 
 .customer__data-btn{ 
     display: inline-block;
@@ -259,7 +288,11 @@
     background: rgba(255, 255, 255, 0.15);
     transition: all .5s;
     margin-top: 30px;
+    /* margin: 30px auto 50px; */
+    /* max-width: 100px; */
     font-size: 20px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 50px;
     }
     
