@@ -64,26 +64,27 @@
             <form action="#" method="get">
                 <div class="subscription__form">
                     <div>
-                        <input tabindex="1" name="subscription-name" type="text" placeholder="Имя">
+                        <input tabindex="1" name="subscription-name" type="text" id="user__first__name" placeholder="Имя">
                     </div>
                     <div>
-                        <input tabindex="2" name="subscription-surname" type="text" placeholder="Фамилию">
+                        <input tabindex="2" name="subscription-surname" type="text" id="user__second__name" placeholder="Фамилию">
                     </div>
                     <div>
-                        <input tabindex="3" name="subscription-num" type="tel" placeholder="Номер документа">
-                    </div>
-                    <di>
-                        <input tabindex="4" name="subscription-phone" type="tel" placeholder="Телефон">
-                    </di>
-                    <div>
-                        <input tabindex="5" name="subscription-password" type="password" placeholder="Пароль">
+                        <input tabindex="3" name="subscription-num" type="number" id="user__document" placeholder="Номер документа">
                     </div>
                     <div>
-                        <input tabindex="6" name="subscription-password-2" type="password" placeholder="Повторите пароль">
+                        <input tabindex="4" name="subscription-phone" type="tel" id="user__phone" placeholder="Телефон">
+                    </div>
+                    <div>
+                        <input tabindex="5" name="subscription-password" type="password" id="user__password" placeholder="Пароль">
+                    </div>
+                    <div>
+                        <input tabindex="6" name="subscription-password-2" type="password" id="user__password__repeat" placeholder="Повторите пароль">
                     </div>
                 </div>
             </form>
-            <button class="subscription__btn">Регистрация</button>
+            <p id="error__block"></p>
+            <button class="subscription__btn" id="reg__button">Регистрация</button>
         </div>
     </div>
 </section>
@@ -108,6 +109,8 @@
 </footer>
 
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/show__error.js"></script>
+<script src="/js/register.js"></script>
 </body>
 </html>
