@@ -289,3 +289,9 @@ subscription__form-box{
     margin: 0 50px;
   }
 }
+
+#error__block {
+    color: red;
+    font-size: 24pt;
+    margin-bottom: 0px;
+}
