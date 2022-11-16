@@ -61,18 +61,14 @@
         <div class="order__info">
             <img src="image/order.png" alt="">
             <div class="tickets__info">
-                <div class="tickets__info-points">Код заказа: 83672513</div>
-                <div class="tickets__info-points">Стоимость: 3000</div>
-                <div class="tickets__info-points">Номер билета: 13256783</div>
-                <div class="tickets__info-points">Название: JONY</div>
-                <div class="tickets__info-points">Место: Москва</div>
-                <div class="tickets__info-points">Возраст: 0+</div>
-                <div class="tickets__info-points">Дата: 11 декабря</div>
-                <div class="tickets__info-points">Время: 22:00-00:00</div>
-                <div class="tickets__info-points">Рейтинг: 5</div>
-                <div class="tickets__info-points">Непроданных билетов: 57</div>
-                <div class="tickets__info-points">Длительность: 2 часа</div>
-                <div class="tickets__info-points2">Баллов для получения: 0</div>
+                <div class="tickets__info-points" id="concert__code"></div>
+                <div class="tickets__info-points" id="concert__price">Стоимость: 3000</div>
+                <div class="tickets__info-points" id="ticket__code">Номер билета: 13256783</div>
+                <div class="tickets__info-points" id="concert__name">Название: JONY</div>
+                <div class="tickets__info-points" id="concert__place">Место: Москва</div>
+                <div class="tickets__info-points" id="concert__date">Дата: 11 декабря</div>
+                <div class="tickets__info-points" id="concert__time">Время: 22:00-00:00</div>
+                <div class="tickets__info-points" id="concert__duration">Длительность: 2 часа</div>
             </div>
         </div>
         <div class="customer__data-title">Личная информация</div>
@@ -80,29 +76,13 @@
             <input class="button__order" type="button" value="Добавить" onmousedown="viewDiv1()">
             <input class="button__order" type="button" value="Удалить" onmousedown="viewDiv2()">
         </div>
-        <div class="customer__data-wrapper">
-            <div class="customer__data">
-                <input type="text" name="customer__data-name" tabindex="1" placeholder="Имя">
-                <input type="text" name="customer__data-surname" tabindex="2" placeholder="Фамилия">
-                <input type="tel" name="customer__data-birth" tabindex="3" placeholder="Дата рождения">
-                <input type="tel"  name="customer__data-num" tabindex="4" placeholder="Номер документа">
-                <input type="number" name="customer__data-bonus" tabindex="6" placeholder="Количество баллов">
-                <input type="number" placeholder="Ряд" min="1" max="78">
-                <input type="number" placeholder="Место" min="1" max="100">
-            </div>
-            <div id="customer-form2" class="customer__data">
-                <input type="text" name="customer__data-name" tabindex="1" placeholder="Имя">
-                <input type="text" name="customer__data-surname" tabindex="2" placeholder="Фамилия">
-                <input type="tel" name="customer__data-birth" tabindex="3" placeholder="Дата рождения">
-                <input type="tel"  name="customer__data-num" tabindex="4" placeholder="Номер документа">
-                <input type="number" name="customer__data-bonus" tabindex="6" placeholder="Количество баллов">
-                <input type="number" placeholder="Ряд" min="1" max="78">
-                <input type="number" placeholder="Место" min="1" max="100">
+        <div id="guests__row">
+            <div class="customer__data-wrapper">
             </div>
         </div>
         <div class="customer-btn">            
-            <button class="customer__data-btn" href="order.html">
-                Оформить
+            <button class="customer__data-btn">
+                <a href="/profile.html">Оформить</a>
             </button>
         </div>
     </div>
@@ -127,6 +107,7 @@
     </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="/js/get__params.js"></script>
+<script src="/js/order_management.js"></script>
 </body>
 </html>

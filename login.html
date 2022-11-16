@@ -61,17 +61,18 @@
     <div class="container">
         <div class="subscription__title">Вход</div>
         <div class="subscription__block">
-            <div action="#" method="get">
+            <div>
                 <div class="subscription__form">
                     <div class="subscription__form-name">
-                        <input tabindex="1" name="subscription-name" type="tel" placeholder="Введите телефон">
+                        <input tabindex="1" name="subscription-name" type="tel" id="user__phone" placeholder="Введите телефон">
                     </div>
                     <div class="subscription__form-password">
-                        <input tabindex="2" name="subscription-password" type="password" placeholder="Введите пароль">
+                        <input tabindex="2" name="subscription-password" type="password" id="user__password" placeholder="Введите пароль">
                     </div>
                 </div>
             </div>
-            <button class="subscription__btn">Войти</button>
+            <p id="error__block"></p>
+            <button class="subscription__btn" id="user__login_button">Войти</button>
         </div>
     </div>
 </section>
@@ -97,6 +98,8 @@
 
 
 <script src="js/main.js"></script>
+<script src="/js/show__error.js"></script>
+<script src="/js/login.js"></script>
 <!-- <script src="js/login.js"></script> -->
 </body>
 </html>

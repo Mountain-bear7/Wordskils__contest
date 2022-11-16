@@ -61,60 +61,37 @@
         <div class="order__info">
             <img src="image/order.png" alt="">
             <div class="tickets__info">
-                <div class="tickets__info-points">Номер билета: 13256783</div>
-                <div class="tickets__info-points">Город: Москва</div>
-                <div class="tickets__info-points">Название: JONY</div>
-                <div class="tickets__info-points">Дата: 11 декабря</div>
-                <div class="tickets__info-points">Время: 22:00-00:00</div>
-                <div class="tickets__info-points">Непроданных билетов: 57</div>
-                <div class="tickets__info-points2">Стоимость: 3000 р.</div>
+<!--                <div class="tickets__info-points">Номер билета: 13256783</div>-->
+<!--                <div class="tickets__info-points">Город: Москва</div>-->
+                <div class="tickets__info-points" id="concert__name">Название: JONY</div>
+                <div class="tickets__info-points" id="concert__date">Дата: 11 декабря</div>
+                <div class="tickets__info-points" id="concert__time">Время: 22:00-00:00</div>
+<!--                <div class="tickets__info-points">Непроданных билетов: 57</div>-->
+            <div class="tickets__info-points2" id="concert__price">Стоимость: 3000 р.</div>
             </div>
         </div>
-        <!-- <div class="customer__data">
-            <div class="customer__data-title">Личная информация</div>
-            <p>Имя: АбдулМеджид</p>
-            <p>Фамилия: Абдулаев</p>
-            <p>Дата рождения: 22 августа 2000</p>
-            <p>Номер документа: 12 34 657801</p>
-            <p>Место в зале: 76</p>
-            <p>Количество баллов: 0</p>
-            <p>Количество гостей: 1</p>
-            <p>Цена: 3000</p>
-            <div class="btn">
-                <button class="customer__data-btn">
-                    Оформить заказ
-                </button>
-            </div>
-        </div> -->
         <div class="customer__data-title">Личная информация</div>
         <div class="button__block">
             <input class="button__order" type="button" value="Добавить" onmousedown="viewDiv1()">
             <input class="button__order" type="button" value="Удалить" onmousedown="viewDiv2()">
         </div>
-        <div class="customer__data-wrapper">
-            <div class="customer__data">
-                <input type="text" name="customer__data-name" tabindex="1" placeholder="Имя">
-                <input type="text" name="customer__data-surname" tabindex="2" placeholder="Фамилия">
-                <input type="tel" name="customer__data-birth" tabindex="3" placeholder="Дата рождения">
-                <input type="tel"  name="customer__data-num" tabindex="4" placeholder="Номер документа">
-                <input type="number" name="customer__data-bonus" tabindex="6" placeholder="Количество баллов">
-                <input type="number" placeholder="Ряд" min="1" max="78">
-                <input type="number" placeholder="Место" min="1" max="100">
-            </div>
-            <div id="customer-form2" class="customer__data">
-                <input type="text" name="customer__data-name" tabindex="1" placeholder="Имя">
-                <input type="text" name="customer__data-surname" tabindex="2" placeholder="Фамилия">
-                <input type="tel" name="customer__data-birth" tabindex="3" placeholder="Дата рождения">
-                <input type="tel"  name="customer__data-num" tabindex="4" placeholder="Номер документа">
-                <input type="number" name="customer__data-bonus" tabindex="6" placeholder="Количество баллов">
-                <input type="number" placeholder="Ряд" min="1" max="78">
-                <input type="number" placeholder="Место" min="1" max="100">
+        <div class="customer__data-title" id="error__block"></div>
+        <div id="guests__rows">
+            <div class="customer__data-wrapper">
+                <div class="customer__data">
+                    <input type="text" name="customer__data-name" tabindex="1" placeholder="Имя">
+                    <input type="text" name="customer__data-surname" tabindex="2" placeholder="Фамилия">
+                    <input type="date" name="customer__data-birth" tabindex="3" placeholder="Дата рождения">
+                    <input type="tel"  name="customer__data-num" tabindex="4" placeholder="Номер документа">
+<!--                    <input type="number" name="customer__data-bonus" tabindex="6" placeholder="Количество баллов">-->
+                    <input type="number" placeholder="Ряд" min="1" max="78">
+                    <input type="number" placeholder="Место" min="1" max="100">
+                </div>
             </div>
         </div>
+
         <div class="btn">
-            <button class="customer__data-btn">
-                Оформить заказ
-            </button>
+            <button class="customer__data-btn" id="order__button">Оформить заказ</button>
         </div>
     </div>
 </section>
@@ -138,6 +115,9 @@
     </div>
 </footer>
 
+<script src="js/show__error.js"></script>
+<script src="/js/get__params.js"></script>
+<script src="/js/order.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
