@@ -13,7 +13,7 @@ function search__select() {
     const concert__start = document.getElementById("concert__start").value;
     const concert__finish = document.getElementById("concert__finish").value;
 
-    if (concert__start.value & concert__finish.value)
+    if (concert__start && concert__finish)
         window.location = `/search.html?type=${concert__type}?start=${concert__start}?finish=${concert__finish}`;
 }
 
