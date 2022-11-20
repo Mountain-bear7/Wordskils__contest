@@ -4,7 +4,7 @@ async function user__profile() {
     const user__scores = document.getElementById("user__scores");
 
     let  myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer 7D3FmD8LPRnwRplrIIbOdO5PoFK1uZ1LbSx4nBu8CIoTqlSjMtwmkDD3rYilhlGOpDEYStp5IEh59KUw");
+    myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
 
     let requestOptions = {
         method: 'GET',
@@ -27,7 +27,7 @@ async function user__concerts() {
     const all__concerts = document.getElementById("all__concerts");
     let myHeaders = new Headers();
     
-    myHeaders.append("Authorization", "Bearer 5Cod8h5OfzLzsGMv0ZwzEHa9kZUkfDPenrVI25e9A4N8A3NMO1eF4CwDWXz7EIti5bdSByCAG2DQiOxX");
+    myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
 
     let requestOptions = {
         method: 'GET',
@@ -96,5 +96,9 @@ async function user__concerts() {
     })
 }
 
+document.getElementById("logout__button").addEventListener("click", () => {
+    localStorage.removeItem("token")
+    window.location = "/index.html"
+})
 user__profile();
 user__concerts();

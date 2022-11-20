@@ -43,7 +43,7 @@ let concert__code = "";
 document.getElementById("order__button").addEventListener("click", async () => {
     const guests__massive = [];
     let myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer 5Cod8h5OfzLzsGMv0ZwzEHa9kZUkfDPenrVI25e9A4N8A3NMO1eF4CwDWXz7EIti5bdSByCAG2DQiOxX");
+    myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
     myHeaders.append("Content-Type", "application/json");
 
     const guests = document.getElementsByClassName("customer__data");
