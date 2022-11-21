@@ -1,3 +1,8 @@
+
+/*получаем логин и пароль которые ввел пользователь
+после чего если номер телефона длинее 7 символов делаем запрос на бекенд
+если не пришла ошибка то записываем токен в хранилище и делаем переход в лк
+иначе показываем ошибку */
 function user__login() {
     const user__phone = document.getElementById("user__phone").value;
     const user__password = document.getElementById("user__password").value;

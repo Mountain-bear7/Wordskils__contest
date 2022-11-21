@@ -1,3 +1,8 @@
+/* получаем имя, фамилию, доки, пароль, повтор пароля и телефон 
+если пароли совпали и номер телефона с доками длинее 7 символов
+и фамилия и имя больше 3 символов то запрос на сервак
+если ошибка не пришла то переход на страницу входа
+иначе выдача ошибки */
 async function register() {
     const user__name = document.getElementById("user__first__name").value;
     const user__second__name = document.getElementById("user__second__name").value;

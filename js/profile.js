@@ -1,3 +1,4 @@
+//получаем данные пользователя и выводи их в html
 async function user__profile() {
     const user__name = document.getElementById("user__name");
     const user__second__name = document.getElementById("user__second__name");
@@ -22,7 +23,7 @@ async function user__profile() {
     })
     .catch(error => console.log('error', error));
 }
-
+//дальше получаем концерты пользователя и также выводим их в html
 async function user__concerts() {
     const all__concerts = document.getElementById("all__concerts");
     let myHeaders = new Headers();

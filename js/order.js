@@ -1,3 +1,6 @@
+//выводит на html данные
+//выводим инфу о концерте взятую из ссылки
+//потом выводим инфу о самом пользвателе взятую через запрос по токену
 function order() {
     document.getElementById("concert__name").textContent = `Название: ${get__params("concert")}`;
     document.getElementById("concert__date").textContent = `Дата: ${get__params("date")}`;
@@ -45,7 +48,7 @@ document.getElementById("order__button").addEventListener("click", async () => {
     let myHeaders = new Headers();
     myHeaders.append("Authorization", `Bearer ${localStorage.getItem("token")}`);
     myHeaders.append("Content-Type", "application/json");
-
+    //получаем всех гостей добавляем их в массив после чего регистрируем их на концерт а потом сразу запрос на регистрацию
     const guests = document.getElementsByClassName("customer__data");
     for (let i=0; i < guests.length; i++) {
         if ((guests[i].children[0].value.length & guests[i].children[1].value.length >=3) &&
@@ -92,6 +95,10 @@ document.getElementById("order__button").addEventListener("click", async () => {
         redirect: 'follow'
     };
 
+    //получаем инфу о бронировании берем от туда гостей
+    //после чего находим данные этого гостя в форме на сайте
+    //указываем ему место и делаем запрос на это место
+    //если вернулась ошибка то показываем ошибку
     await fetch(`http://tickets.сделай.site/api/order/${concert__code}`, requestOptions)
     .then(response => response.text())
     .then(result => {
@@ -133,17 +140,4 @@ document.getElementById("order__button").addEventListener("click", async () => {
         })
     })
     .catch(error => console.log('error', error));
-
-
-//    if (guests)
-
-//    for (let i=0; i < guests.length; i++) {
-//        if ((guests[i].children[4].value.length & guests[i].children[5].value.length >= 1)) {
-//
-//        }
-//        else {
-//            show__error("Некоректные данные")
-//            break
-//        }
-//    }
 })

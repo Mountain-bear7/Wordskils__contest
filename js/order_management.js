@@ -1,3 +1,4 @@
+//вывод инфы о броне пользователю
 console.log(get__params("bill_code"))
 
 async function show__info() {

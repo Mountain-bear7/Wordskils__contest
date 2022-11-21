@@ -1,3 +1,4 @@
+//функция сортировки массива с json
 function sortByProperty(property){
     return function(a,b){
         if(a[property] > b[property])
@@ -8,15 +9,23 @@ function sortByProperty(property){
     }
 }
 
+//переход на страницу поиска с заданными параметрами
 function search__select() {
     const concert__type = document.getElementById("concert__type").value;
     const concert__start = document.getElementById("concert__start").value;
     const concert__finish = document.getElementById("concert__finish").value;
 
+    /* если поля дат заполненые то даелается переход на страницу поиска
+    передавая параметры через ?
+    название ключа=параметр */
     if (concert__start && concert__finish)
         window.location = `/search.html?type=${concert__type}?start=${concert__start}?finish=${concert__finish}`;
 }
 
+//получение концертов с бекенда более подробно ниже
+/*сначало удаляем концерты, потом получаем с сервера концерты
+отсеиваем те которые не подошли по цене
+дальше на основе названия добавляем ссылку на изображение */
 async function search__handler() {
     const all__concerts = document.getElementById("founded__concerts");
     all__concerts.innerHTML = `<div class="stocks__items"></div>`
@@ -56,7 +65,7 @@ async function search__handler() {
 //                window.location = `/order.html?concert=${concert.name_concert}?date=${concert.date_concert}?time=${concert.time_start}?price=${concert__price}?concert_id=${concert.id}`
 
 
-
+            //добавление концерта
             if (all__concerts.children[concerts__in__block__count].childElementCount !== 3) {
                 all__concerts.children[concerts__in__block__count].innerHTML +=
                     `<div class="stocks__item">
@@ -105,12 +114,18 @@ async function search__handler() {
     })
 }
 
+//строке мы убираем домен и параметры, оставляя только называние страницы
 let page = window.location.href;
 
-page = page.split("/");
-page = page[page.length-1];
+page = page.split("/"); //делаю разбивку по /
+page = page[page.length-1];// минус один так как все массивы должны начинатся с 0
+/* сначала по ? отсеиваю параметры, 0 это выбор первого элемента
+то самое название страницы
+потом по # это отсеивание якоря */
 page = page.split("?")[0].split("#")[0];
 
+//если страница index то вешаем на кнопку обработчик событий
+//иначе вызывается функция поиска и два обработчика на минимальную и максимальную стоимость
 if (page === "index.html") document.getElementById("search__button").addEventListener("click", search__select);
 else {
     search__handler();

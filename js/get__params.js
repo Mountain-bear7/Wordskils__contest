@@ -1,3 +1,4 @@
+//ищет параметры в ссылке
 function get__params(parameter__name) {
     let result = null;
     location.search
